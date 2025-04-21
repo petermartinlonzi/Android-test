@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#008037">
+
+    <!-- Header text -->
+    <TextView
+        android:id="@+id/detailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Coffee image -->
+    <ImageView
+        android:id="@+id/coffeeImage"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/sample_coffee"
+        android:layout_below="@id/detailsTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter" />
+
+    <!-- Rounded white content background -->
+    <LinearLayout
+        android:id="@+id/detailsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/details_rounded_bg"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- Coffee Name -->
+        <TextView
+            android:text="Ice Chocolate Coffee"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Description -->
+        <TextView
+            android:text="Welcome to a World of Rich Flavor! 🍫☕ Indulge in the perfect blend of creamy chocolate and premium coffee, delivered straight to your door. Whether you're craving a sweet pick-me-up or a luxurious treat, our Chocolate Coffee will transport your taste buds to a new level of indulgence. Order now and experience the ultimate in comfort and flavor!"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Size options with weight -->
+        <LinearLayout
+            android:id="@+id/sizeOptionsLayout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnSmall"
+                    android:text="Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnMedium"
+                    android:text="Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLarge"
+                    android:text="Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Price and Quantity -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:weightSum="2">
+
+            <TextView
+                android:text="TZS 5,800"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:text="-"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtQuantity"
+                    android:text="1"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:text="+"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Place Order Button -->
+        <Button
+            android:id="@+id/btnPlaceOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PLACE ORDER TZS 5,800"
+            android:backgroundTint="#008037"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>
